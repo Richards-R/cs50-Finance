@@ -1,0 +1,160 @@
+body
+{
+    background-color:  #faf5f9;
+}
+
+.alert
+{
+    background-color:	#EEE8AA;
+}
+
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: xx-large;
+    background-color: #f7e1f1;
+}
+
+.navbar
+{
+    background-color: #f7e1f1;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+.head1, .head2, .head3
+{
+    padding : 10px 10px 15px 10px;
+}
+
+.head2, .head3
+{
+    font-weight : bold;
+    font-size : 1.5em;
+    text-align : center;
+    color : gray;
+}
+
+table
+{
+    margin-left : auto;
+    margin-right : auto;
+}
+
+.row2, .control
+{
+    margin-left : auto;
+    margin-right : auto;
+}
+
+.head_price, .head_price2
+{
+    font-weight : bold;
+    font-size : 1.5em;
+    text-align : center;
+    color : gray;
+}
+
+.h_name
+{
+    text-transform : uppercase;
+}
+
+.head3,  .head_price2
+{
+    color : black;
+}
+
+#sell_num
+{
+    width : 4em;
+    text-align : center;
+}
+
+p
+{
+    margin-top: 40px;
+}
+
+select, input
+{
+    height: 2em;
+    margin-right:5px;
+}
+
+select
+{
+    margin-right:5px;
+}
+
+#validator
+{
+    height: 1em;
+}
+
+
+.nav-link
+{
+    font-weight: bold;
+    color: #390961;
+}
+
+h2, h4, p, .head3, .head_price2
+{
+    color: #390961;
+}
+
+.round_shadow_button
+{
+    font: 14px/2.3em trebuchet,arial;
+    color: #390961;
+    text-shadow: 0 1px 0 #f7e1f1;
+    text-align: center;
+    text-decoration: none;
+    padding: 0 5px;
+    margin: 0px auto 5px;
+    background: #f7e1f1 repeat-x bottom;
+    border: 1px solid #ddd;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -o-border-radius: 6px;
+    -ms-border-radius: 6px;
+    border-radius: 6px;
+    -moz-box-shadow: 0 3px 5px #f7e1f1;
+    -webkit-box-shadow: 0 3px 5px #f7e1f1;
+    -o-box-shadow: 0 3px 5px #f7e1f1;
+    -ms-box-shadow: 0 3px 5px #f7e1f1;
+    box-shadow: 0 3px 5px #f7e1f1;
+}
+
+#bar
+{
+    margin-left : auto;
+    margin-right : auto;
+}
+
+#wbar
+{
+    max-width : 15%;
+    margin-left : auto;
+    margin-right : auto;
+}

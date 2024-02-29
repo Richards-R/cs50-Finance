@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Ticker Quote
+{% endblock %}
+
+{% block main %}
+
+    <h2>Ticker Quote for {{ ticker.symbol }}</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Ticker</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class= "t_symbol">{{ ticker.symbol }}</td>
+                <td class= "t_price">{{ ticker.price }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+{% endblock %}

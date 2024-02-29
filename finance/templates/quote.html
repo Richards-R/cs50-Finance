@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Find Quote
+{% endblock %}
+
+{% block main %}
+
+    <h2>Find Stock</h2>
+    <form action="/quote" method="post">
+        <input type="text" name="symbol" placeholder="Ticker" required>
+        <button class ="round_shadow_button" type="submit">Display Ticker</button>
+    </form>
+
+{% endblock %}

@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell shares : {{ account_name }}
+{% endblock %}
+
+{% block main %}
+<div class="header">
+    <h2>Sell Stock</h2>
+
+    <p> Select the stock and number of shares you wish to sell: </p>
+</div>
+<div class="container">
+    <div class="section">
+        <div >
+            <table>
+                <tr>
+                    <th class = head3 >Portfolio Total</th>
+                    <th class = head2 >Cash balance</th>
+                </tr>
+                <tr>
+                    <td class= "head_price2">{{ grand_total }}</td>
+                    <td class= "head_price">{{ cash }}</td>
+                </tr>
+                <tr>
+                    <form action="/sell" method="post">
+                        <select name= "symbol">
+                            <option disabled selected value="">Stock</option>
+                            {% for position in positions %}
+                            <option>{{ position.ticker }}</option>
+                            {% endfor %}
+                        </select>
+                        <input name="shares" id="sell_num" type="number" value=0 min = "0"/>
+                        <button class ="round_shadow_button" type= "submit" id= "sell_but"> Sell </button>
+                    </form>
+                </tr>
+            </table>
+        </div>
+        <p> Alternatively, select the number of shares you wish to sell from an individual stock below: </p>
+        <table>
+            <thead>
+                <tr id=tr1>
+                    <th class = head1 >Ticker</th>
+                    <th class = head1 >Shares held</th>
+                    <th class = head1 > </th>
+                    <th class = head1 >Current price</th>
+                    <th class = head1 >Current value</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for position in positions %}
+                <tr>
+                    <td class= "h_name">{{ position.ticker }}</td>
+                    <td class= "h_name">{{ position.units }}</td>
+                    <td class= "h_name">
+                    <form action="/sell" method="post">
+                        <input type = hidden name = "ticker" value = "{{ position.ticker }}"/>
+                        <input name="units" id="sell_num" type="number" value=0 min = "0" max = "{{ position.units }}"/>
+                        <button class ="round_shadow_button" type= "submit" id= "sell_but"> Sell </button>
+                    </form>
+                    </td>
+                    <td class= "h_name">{{ position.price }}</td>
+                    <td class= "h_name">{{ position.pos_value }}</td>
+               </tr>
+                {% endfor %}
+
+                </tbody>
+            </tbody>
+        </table>
+     </div>
+</div>
+{% endblock %}

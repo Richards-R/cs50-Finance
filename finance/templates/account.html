@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Account : {{ account_name }}
+{% endblock %}
+
+{% block main %}
+<div class="header">
+    <h2>Account Positions</h2>
+    <h4> for {{ account_name }} </h4>
+</div>
+<div class="container">
+    <div class="section">
+        <div >
+            <table>
+                <tr>
+                    <th class = head3 >Portfolio Total</th>
+                    <th class = head2 >Cash balance</th>
+                </tr>
+                <tr>
+                    <td class= "head_price2">{{ grand_total }}</td>
+                    <td class= "head_price">{{ cash }}</td>
+                </tr>
+            </table>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th class = head1 >Ticker</th>
+                    <th class = head1 >Shares held</th>
+                    <th class = head1 >Current price</th>
+                    <th class = head1 >Current value</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for position in positions %}
+                <tr>
+                    <td class= "h_name">{{ position.ticker }}</td>
+                    <td class= "h_name">{{ position.units }}</td>
+                    <td class= "h_name">{{ position.price }}</td>
+                    <td class= "h_name">{{ position.pos_value }}</td>
+               </tr>
+                {% endfor %}
+
+                </tbody>
+            </tbody>
+        </table>
+     </div>
+</div>
+{% endblock %}
